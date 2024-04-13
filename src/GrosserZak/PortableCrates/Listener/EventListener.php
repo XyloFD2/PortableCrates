@@ -26,7 +26,7 @@ class EventListener implements Listener {
         $player = $ev->getPlayer();
         $item = $player->getInventory()->getItemInHand();
         if($item->hasNamedTag()) {
-            if(($crateTag = $item->getNamedTag()->getCompoundTag("PortableCrates")) !== null) {
+            if(($crateTag = $item->getNamedTag()->getCompoundTag("RebirthCrates")) !== null) {
                 $pcMgr = $this->plugin->getPCManager();
                 $crate = $pcMgr->existsCrate($crateTag->getString("Name"));
                 $crateItem = $crate->getItem();
