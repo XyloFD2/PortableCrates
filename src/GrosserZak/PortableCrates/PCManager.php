@@ -55,7 +55,7 @@ class PCManager {
                 if($i>=self::MAX_SIZE) {
                     if($i == 46 and isset($rewardsArr[($page-1)])) {
                         $item = VanillaBlocks::WOOL()->setColor(DyeColor::RED())->asItem();
-                        $item->setNamedTag(CompoundTag::create()->setTag("PortableCrates",
+                        $item->setNamedTag(CompoundTag::create()->setTag("RebirthCrates",
                             CompoundTag::create()->setTag("RewardGUI",
                                 CompoundTag::create()->setString("GoToPage", "Previous")
                             )
@@ -63,7 +63,7 @@ class PCManager {
                         $item->setCustomName(G::RESET . G::RED . "Previous Page");
                     } elseif($i == 49) {
                         $item = VanillaItems::PAPER();
-                        $item->setNamedTag(CompoundTag::create()->setTag("PortableCrates",
+                        $item->setNamedTag(CompoundTag::create()->setTag("RebirthCrates",
                             CompoundTag::create()->setTag("RewardGUI",
                                 CompoundTag::create()->setByte("PageNumber", $page)
                             )
@@ -71,7 +71,7 @@ class PCManager {
                         $item->setCustomName(G::RESET . G::WHITE . "Page: " . ($page+1));
                     } elseif($i == 52 and isset($rewardsArr[($page+1)])) {
                         $item = VanillaBlocks::WOOL()->setColor(DyeColor::GREEN())->asItem();
-                        $item->setNamedTag(CompoundTag::create()->setTag("PortableCrates",
+                        $item->setNamedTag(CompoundTag::create()->setTag("RebirthCrates",
                             CompoundTag::create()->setTag("RewardGUI",
                                 CompoundTag::create()->setString("GoToPage", "Next")
                             )
