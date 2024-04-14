@@ -222,6 +222,7 @@ class PCManager {
      */
     private function getCrateItemByData(array $data) : Item {
         $crateItem = StringToItemParser::getInstance()->parse($data["item"]);
+        $itemName = $crateItem->getName();
         $crateItem->setNamedTag(CompoundTag::create()
             ->setTag("PortableCrates", CompoundTag::create()
                 ->setString("Name", $data["name"])
